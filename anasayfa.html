@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anasayfa</title>
+  <link rel="stylesheet" href="anasayfa.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <li style="margin-right: 1cm;"><button><a href="girisyap.html">Giriş Yap</a></button></li>
+        <li style="margin-right: 15cm;"><button><a href="uyeol.html">Üye Ol</a></button></li>
+        <li>
+          <div style="display: flex; align-items: center;">
+            <img src="img/hand.jpg" id="logo1" style="width: 10%; margin-right: 10px;">
+            <h2 style="margin-left:3cm;font-size: 20px; font-weight: bold; color: #333;">Depremzede Öğrencilere Yönelik İş &amp; Burs Destekleri</h2>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  
+
+  <main>
+    <aside>
+      <h2>Arama Kutusu</h2>
+      <input type="text" id="searchInput" placeholder="Ara..." oninput="filterItems()">
+    </aside>
+
+     <h1>İlanlar</h1>
+     <section>
+     
+      <div class="ilan-container" onclick="showDetails('ilan1')" data-ilanid="ilan1">
+        <img src="img/inci.jpg" alt="ilan1">
+        <p>tev bursu</p>
+      </div>
+      <div class="ilan-container" onclick="showDetails('ilan2')" data-ilanid="ilan2">
+        <img src="img/hand.jpg">
+        <p>Staj</p>
+      </div>
+      <div class="ilan-container" onclick="showDetails('ilan3')" data-ilanid="ilan3">
+        <img src="img/inci.jpg" alt="ilan3">
+        <p>İş</p>
+      </div>
+      <div class="ilan-container" onclick="showDetails('ilan4')" data-ilanid="ilan4">
+        <img src="img/inci.jpg" alt="ilan4">
+        <p>İnci bursu</p>
+      </div>
+      <div class="ilan-container" onclick="showDetails('ilan5')" data-ilanid="ilan5">
+        <img src="img/inci.jpg">
+        <p>Staj</p>
+      </div>
+      <div class="ilan-container" onclick="showDetails('ilan6')" data-ilanid="ilan6">
+        <img src="img/inci.jpg" alt="ilan6">
+        <p>İş</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Telif Hakkı © 2023 - Anasayfa</p>
+  </footer>
+
+  <script src="anasayfa.js"></script>
+  <script>
+    function showDetails(ilanId) {
+      window.location.href = "ilan-detay.html?id=" + ilanId;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #f5ad05;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    background-color: #f5ad05;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* İlan Detayı Stilleri */
+  section {
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  #ilan-details img {
+    width: 360px;
+    height: 270px;
+    margin-bottom: 10px;
+  }
+  
+  #ilan-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #ilan-details p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

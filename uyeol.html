@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Üye Ol</title>
+  <link rel="stylesheet" href="uyeol.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <li style="margin-right: 1cm;"><button><a href="girisyap.html">Giriş Yap</a></button></li>
+        <li style="margin-right: 1cm;"><button><a href="uyeol.html">Üye Ol</a></button></li>
+        <li style="margin-right: 15cm;"><button><a href="anasayfa.html">Anasayfa</a></button></li>
+        <li><img src="img\hand.jpg" id="logo1" style="width: 10%;margin: 0;"></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <section>
+      <h1>Üye Ol</h1>
+
+      <div class="member-type">
+        <h2>Şirket Üyeliği</h2>
+        <form>
+          <div class="form-group">
+            <label for="company-name">Şirket Adı:</label>
+            <input type="text" id="company-name" name="company-name" required>
+          </div>
+          <div class="form-group">
+            <label for="company-email">E-posta:</label>
+            <input type="email" id="company-email" name="company-email" required>
+          </div>
+          <div class="form-group">
+            <label for="company-password">Parola:</label>
+            <input type="password" id="company-password" name="company-password" required>
+          </div>
+          <button type="submit">Şirket Olarak Üye Ol</button>
+        </form>
+      </div>
+
+      <div class="member-type">
+        <h2>Bireysel Üyelik</h2>
+        <form>
+          <div class="form-group">
+            <label for="individual-name">Adınız:</label>
+            <input type="text" id="individual-name" name="individual-name" required>
+          </div>
+          <div class="form-group">
+            <label for="individual-email">E-posta:</label>
+            <input type="email" id="individual-email" name="individual-email" required>
+          </div>
+          <div class="form-group">
+            <label for="individual-password">Parola:</label>
+            <input type="password" id="individual-password" name="individual-password" required>
+          </div>
+          <button type="submit">Bireysel Olarak Üye Ol</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Telif Hakkı © 2023 - Üye Ol</p>
+  </footer>
+
+</body>
+
+</html>

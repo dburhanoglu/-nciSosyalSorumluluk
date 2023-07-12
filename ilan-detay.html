@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlan Detayı</title>
+  <link rel="stylesheet" href="ilan-detay.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <li style="margin-right: 1cm;"><button><a href="girisyap.html">Giriş Yap</a></button></li>
+        <li style="margin-right: 15cm;"><button><a href="uyeol.html">Üye Ol</a></button></li>
+        <li><img src="img/hand.jpg" id="logo1" style="width: 10%; margin: 0;"></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>İlan Detayı</h1>
+      <div id="ilan-details"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Telif Hakkı © 2023 - İlan Detayı</p>
+  </footer>
+
+  <script src="ilan-detay.js"></script>
+  <script>
+    // İlan detaylarını alma ve gösterme
+    var ilanId = getParameterByName('id');
+    var ilanDetails = getIlanDetails(ilanId);
+    showIlanDetails(ilanId, ilanDetails);
+
+    // URL'den parametre alma
+    function getParameterByName(name) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(location.search);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // İlan detaylarını almak için sunucu tarafı veya veritabanı isteği yapılabilir.
+    function getIlanDetails(ilanId) {
+      // Örnek bir ilan detayı nesnesi döndürme
+      if (ilanId === "ilan1") {
+        return {
+          title: "Tev Bursu",
+          description: "Üniversite öğrencilerine verilen Tev Bursu hakkında detaylı bilgiler...",
+          // Diğer ilan detayları
+        };
+      } else if (ilanId === "ilan2") {
+        return {
+          title: "Staj",
+          description: "Yaz dönemi için stajyer aranıyor. İlgili bölümler öncelikli tercih edilecektir...",
+          // Diğer ilan detayları
+        };
+      } else if (ilanId === "ilan3") {
+        return {
+          title: "İş",
+          description: "İş ilanı açıklaması ve gereklilikler hakkında detaylı bilgiler...",
+          // Diğer ilan detayları
+        };
+      }
+      // Diğer ilan detayları için gerekli kontroller yapılabilir veya sunucuya istek gönderilebilir.
+      return null;
+    }
+
+    // İlan detaylarını gösterme
+    function showIlanDetails(ilanId, ilanDetails) {
+      if (ilanDetails) {
+        var ilanContainer = document.getElementById("ilan-details");
+        var imgSrc = "";
+
+        if (ilanId === "ilan1") {
+          imgSrc = "img/inci.jpg";
+        } else if (ilanId === "ilan2") {
+          imgSrc = "img/hand.jpg";
+        }
+
+        ilanContainer.innerHTML = `
+          <img src="${imgSrc}" alt="${ilanId}" style="width: 360px; height: 270px;">
+          <h2>${ilanDetails.title}</h2>
+          <p>${ilanDetails.description}</p>
+          <!-- Diğer ilan detayları -->
+        `;
+      }
+    }
+  </script>
+</body>
+
+</html>
